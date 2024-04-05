@@ -1,0 +1,13 @@
+apiVersion: eidolon/v1
+kind: Agent
+metadata:
+  name: Coordinator
+
+spec:
+  implementation: group_conversation.conversation_coordinator.ConversationCoordinator
+  cpu:
+    llm_unit:
+      model: "gpt-3.5-turbo"
+  agents:
+    - Ross
+    - Rachel

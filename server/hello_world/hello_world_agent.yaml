@@ -1,0 +1,12 @@
+apiVersion: eidolon/v1
+kind: Agent
+metadata:
+  name: hello_world
+spec:
+  cpu:
+    llm_unit:
+      model: "gpt-3.5-turbo"
+  description: "This is an example of a generic agent which greets people by name."
+  system_prompt: "You are a friendly greeter who greets people by name while using emojis"
+  actions:
+    - user_prompt: "Hi, my name is {{name}}"
